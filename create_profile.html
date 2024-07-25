@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+</head>
+<body>
+    <form action="{{ url }}" method="POST">
+        <label for="username">Username</label><br>
+        <input id="username" name="username" required></input>
+        <br><br>
+        <label for="fname">First Name</label><br>
+        <input id="fname" name="fname" required></input>
+        <br><br>
+        <label for="lname">Last Name</label><br>
+        <input id="lname" name="lname" required></input>
+        <br><br>
+        <label for="age">Age</label><br>
+        <input id="age" name="age" required></input>
+        <br><br>
+        <label for="email">email</label><br>
+        <input id="email" name="email"></input>
+        <br><br>
+        <label for="phone">phone</label><br>
+        <input id="phone" name="phone"></input>
+        <br><br>
+        <input type="submit">
+    </form>
+
+    <h3>Users so far:</h3>
+
+    {% for username, profile in users.items() %}
+    <p>{{profile.fname}}</p>
+    {% endfor %}
+
+</body>
+</html>
